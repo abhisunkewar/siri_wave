@@ -50,9 +50,9 @@ class IOS9SiriWavePainter extends CustomPainter {
   static const int _speedFactor = 1;
   static const List<double> _speedRanges = [.5, 1];
   static const List<Color> _waveColors = [
-    Color.fromRGBO(173, 57, 76, 1),
-    Color.fromRGBO(48, 220, 155, 1),
-    Color.fromRGBO(15, 82, 169, 1),
+    Color.fromRGBO(255, 19, 93, 0.6),
+    Color.fromRGBO(255, 19, 93, 1),
+    Color.fromRGBO(255, 19, 93, 0.8),
   ];
   static const List<int> _widthRanges = [1, 3];
 
@@ -183,9 +183,7 @@ class IOS9SiriWavePainter extends CustomPainter {
         }
 
         path.close();
-        final paint = Paint()
-          ..blendMode = BlendMode.plus
-          ..color = wave.color;
+        final paint = Paint()..color = wave.color;
         canvas.drawPath(path, paint);
       }
 
